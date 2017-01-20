@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+    </qresource>
+    <qresource prefix="/files">
+        <file>images/image_Qt.jpg</file>
+        <file>images/image_Qt.png</file>
+    </qresource>
+</RCC>

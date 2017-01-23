@@ -1,4 +1,4 @@
-import QtQuick 2.7
+import QtQuick 2.5
 import QtQuick.Window 2.2
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Controls 1.4
@@ -73,7 +73,7 @@ Window {
             minorTickmarkCount: 3
             tickmarkStepSize: 20
             tickmarkLabel: Text {
-                            topPadding: 7
+                            //topPadding: 7
                             color: "white"
                             font.pixelSize: 10
                             text: styleData.value === 50 ? "50" : (styleData.value === 90 ? "90" : styleData.value === 130 ? "130" : "")

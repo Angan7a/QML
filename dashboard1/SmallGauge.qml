@@ -1,4 +1,4 @@
-import QtQuick 2.7
+import QtQuick 2.5
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Extras 1.4
 
@@ -15,7 +15,7 @@ CircularGauge {
         minorTickmarkCount: 3
         tickmarkStepSize: 25
         tickmarkLabel: Text {
-                        topPadding: 7
+                        //topPadding: 7
                         color: "white"
                         font.pixelSize: 10
                         text: styleData.value === 0 ? "0" : (styleData.value === 50 ? "1/2" : styleData.value === 100 ? "1/1" : "")

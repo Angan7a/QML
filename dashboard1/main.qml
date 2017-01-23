@@ -13,6 +13,47 @@ Window {
     height: 500
     width: 1200
     color: "black"
+    Rectangle {
+        height: 95
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        y: temp.y - 15
+        anchors.horizontalCenter: temp.horizontalCenter
+    }
+    Rectangle {
+        height: 95
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        y: feul.y - 15
+        anchors.horizontalCenter: feul.horizontalCenter
+    }
+    Rectangle {
+        height: 312
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        anchors.verticalCenter: speed.verticalCenter
+        anchors.horizontalCenter: speed.horizontalCenter
+    }
+    Rectangle {
+        height: 312
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        anchors.verticalCenter: rpm.verticalCenter
+        anchors.horizontalCenter: rpm.horizontalCenter
+    }
+
     Slider {
         id: slide
         width: parent.width
@@ -57,6 +98,7 @@ Window {
         }
     }
 
+
     SmallGauge {
         id: feul
 
@@ -92,9 +134,11 @@ Window {
                 color: styleData.value >= 125 ? "red" : "white"
             }
 
+
         }
 
     }
+
 
 }
 

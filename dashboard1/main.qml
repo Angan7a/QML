@@ -5,10 +5,12 @@ import QtQuick.Controls 1.4
 import QtQuick.Extras 1.4
 
 
+
+
 Window {
     property real diff: 100
     property real diff_small: 5
-    id: yy
+    id: root
     visible: true
     height: 500
     width: 1200

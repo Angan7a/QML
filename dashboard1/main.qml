@@ -1,18 +1,61 @@
-import QtQuick 2.7
+import QtQuick 2.5
 import QtQuick.Window 2.2
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Controls 1.4
 import QtQuick.Extras 1.4
 
 
+
+
 Window {
     property real diff: 100
     property real diff_small: 5
-    id: yy
+    id: root
     visible: true
     height: 500
     width: 1200
     color: "black"
+    Rectangle {
+        height: 95
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        y: temp.y - 15
+        anchors.horizontalCenter: temp.horizontalCenter
+    }
+    Rectangle {
+        height: 95
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        y: feul.y - 15
+        anchors.horizontalCenter: feul.horizontalCenter
+    }
+    Rectangle {
+        height: 312
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        anchors.verticalCenter: speed.verticalCenter
+        anchors.horizontalCenter: speed.horizontalCenter
+    }
+    Rectangle {
+        height: 312
+        width: height
+        radius:height / 2
+        color: "black"
+        border.color: "silver"
+        border.width: 2
+        anchors.verticalCenter: rpm.verticalCenter
+        anchors.horizontalCenter: rpm.horizontalCenter
+    }
+
     Slider {
         id: slide
         width: parent.width
@@ -57,6 +100,7 @@ Window {
         }
     }
 
+
     SmallGauge {
         id: feul
 
@@ -73,7 +117,7 @@ Window {
             minorTickmarkCount: 3
             tickmarkStepSize: 20
             tickmarkLabel: Text {
-                            topPadding: 7
+                            //topPadding: 7
                             color: "white"
                             font.pixelSize: 10
                             text: styleData.value === 50 ? "50" : (styleData.value === 90 ? "90" : styleData.value === 130 ? "130" : "")
@@ -92,9 +136,11 @@ Window {
                 color: styleData.value >= 125 ? "red" : "white"
             }
 
+
         }
 
     }
+
 
 }
 
